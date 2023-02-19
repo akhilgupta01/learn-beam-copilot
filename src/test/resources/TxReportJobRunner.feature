@@ -9,7 +9,7 @@ Feature: Aggregates customer transactions and reports total sale amount and numb
     When the customer transactions are aggregated
     Then the following records are generated
       | customerID | totalAmount | totalTransactions |
-      | cust-001   | 600         | 3                 |
+      | cust-001   | 600.0       | 3                 |
 
   Scenario: Multiple transactions for multiple customers
     Given the following transactions are received
@@ -21,8 +21,8 @@ Feature: Aggregates customer transactions and reports total sale amount and numb
     When the customer transactions are aggregated
     Then the following records are generated
       | customerID | totalAmount | totalTransactions |
-      | cust-001   | 300         | 2                 |
-      | cust-002   | 184         | 2                 |
+      | cust-001   | 300.0       | 2                 |
+      | cust-002   | 184.0       | 2                 |
 
   Scenario: No transactions
     Given the following transactions are received
@@ -39,7 +39,7 @@ Feature: Aggregates customer transactions and reports total sale amount and numb
     When the customer transactions are aggregated
     Then the following records are generated
       | customerID | totalAmount | totalTransactions |
-      | cust-001   | 100         | 1                 |
+      | cust-001   | 100.0       | 1                 |
       | cust-002   | 150.50      | 1                 |
     And the following transactions are captured in error
       | customerID | transactionID | amount | txTime              | itemID   |

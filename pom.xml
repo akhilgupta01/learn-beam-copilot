@@ -25,6 +25,7 @@
         <pubsub.version>v1-rev20211012-1.32.1</pubsub.version>
         <slf4j.version>1.7.30</slf4j.version>
         <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+        <cucumber-version>7.11.1</cucumber-version>
     </properties>
 
     <dependencyManagement>
@@ -112,22 +113,15 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>7.11.1</version>
+            <version>${cucumber-version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>7.11.1</version>
+            <version>${cucumber-version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-core</artifactId>
-            <version>7.11.1</version>
-            <scope>test</scope>
-        </dependency>
-
     </dependencies>
 
     <build>
